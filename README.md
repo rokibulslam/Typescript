@@ -17,10 +17,35 @@ fucntion add(a, b){
 add(20, "20") //result 2020
 
 Typescript
-Regular Javascript Code
 fucntion add(a:number, b:number){
     return a+b
 }
 add(20, "20") //Give error.
 ```
+
+### Environ setup for Typescritp
+```
+npm init -y
+```
+Global
+```
+npm install -g typescript
+```
+Local
+```
+npm install -save-dev typescript
+```
+use npx for local dependency. You can see .bin folder in node_module for dev-dependency
+```
+npx tsc --version
+```
+run Typescript and create tsconfig file
+Remeber .ts file will not work in browser. ts file convert into js file
+```
+npx tsc init
+npx tsc fileName.ts
+```
+Important Configuration for Typescript:
+> Go to tsconfig
+> baseurl => uncomment to change base url
 

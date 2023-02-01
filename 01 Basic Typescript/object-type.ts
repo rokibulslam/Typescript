@@ -85,3 +85,22 @@ class AStudent extends IUser {
     console.log(`userName: ${this.userName}, age:${this.age}, Id:${this.studentId}`);
   }
 }
+// Encapsulation 
+/*
+* public
+* private can not extend, only accessable in the class.
+* protected can be inherit by other (sub) class but no access from outside class.
+* readonly
+*/
+class EIUser {
+  // Propertise, methods, constructor
+  public userName: string;
+  public age: number;
+  constructor(userName: string, age: number) {
+    this.userName = userName;
+    this.age = age;
+  }
+  display(): void {
+    console.log(`userName: ${this.userName}, age:${this.age}`);
+  }
+}

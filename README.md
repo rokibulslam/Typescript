@@ -48,6 +48,13 @@ npx tsc init
 npx tsc fileName.ts
 ```
 Important Configuration for Typescript:
-> Go to tsconfig
-> baseurl => uncomment to change base url
+```
+npx tsc --init
+```
+Got to tsconfig.ts
+* outDir => for output folder
+* rootDir ==> to set compiler folder
+* noUnusedParameter:true ==> Raise error for unused parameter
+* noUnusedLocals
+
 

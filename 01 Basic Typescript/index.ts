@@ -1,64 +1,45 @@
-const aa: string = "Hello world"
+// Built in Type : number, string, boolean, void, undefined, null
 
+let num; //any types
+let userId: number;
+let firstName: string;
+let lastName: string;
+let isTrue: boolean;
 
-// string, number, array, null,undefined, boolean, never, 
-// any, 
+userId = 1233;
+firstName = "Rokibul";
+lastName = "Islam";
+isTrue = true;
 
-function getLowercase(str: string) {
-    return str.toLowerCase()
+// Void 
+function display(): void {
+  console.log("Hi I am display");
 }
+display();
 
-console.log(getLowercase("Hello World"))
+// Union Types 
+let userIds: string | number;
+userIds = 234;
 
-
-const b: number = 254;
-
-// Normal Function
-function add(number1: number, number2: number): number{
-    return number1 + number2
+function displayUserInfo(userIds: string | number) {
+  console.log(userIds);
 }
-// Arrow Function
+displayUserInfo(1234);
 
-const substract = (number1: number, number2: number):number => {
-    return number1 - number2;
-}
+// Array Types 
+// let userNames: string[]; 
+let userNames:Array<string>
 
-substract(34, 24)
-add(3, 4);
-add(54, 5);
+userNames = ["andi", "korim", "rahim"]
 
-// Array 
-const arr3:Array<number | string> = [123, 121, 'tamim']
-const arr1: number[] = [123, 154, 134]
-const arr2: string[] = ['asr', "sfdsd",]
+// let multipleType: (string | number)[]
+let multipleType: Array<string | number>
+    
+multipleType=[2323, "r3"]
 
-// create or modify type: type typename = type structure 
-type myType = number | string;
+// Tuple Type 
+// mixed data - key, value;
+let user: [number, string];
+user = [101, "anis"]
 
-const id: myType = "23";
 
-// Object 
-
-// Create Object Type
-interface IPerson {
-    name: string;
-    age: number;
-    hobby?: string;         // ? for optional
-}
-
-const person: IPerson ={
-    name: "Tamim",
-    age: 22,
-    hobby: "Programming"
-};
- 
-// Enum 
-
-enum Colors {
-     color1 = '#fff',
-    color2 = "#fffa",
-    color3 = "#fffas"
- }
-console.log(Colors.color1)
-
-// Generic

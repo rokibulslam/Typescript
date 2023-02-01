@@ -23,17 +23,19 @@ fucntion add(a:number, b:number){
 add(20, "20") //Give error.
 ```
 
-### Environ setup for Typescritp
+### Environment setup for Typescritp
 ```
 npm init -y
 ```
 Global
 ```
 npm install -g typescript
+tsc filename.ts
 ```
-Local
+Local/dev-dependency
 ```
 npm install -save-dev typescript
+npx tsc filename.ts
 ```
 use npx for local dependency. You can see .bin folder in node_module for dev-dependency
 ```
